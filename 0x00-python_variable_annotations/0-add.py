@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Write a type-anotated function that takes a float a and float b
 as arguments and returns their sum as float
