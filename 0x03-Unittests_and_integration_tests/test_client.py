@@ -35,7 +35,6 @@ class TestGithubOrgClient(unittest.TestCase):
             self.assertEqual(response, result.get('repos_url'))
 
     @patch("client.get_json")
-
     def test_public_repos(self, mock_get_json: MagicMock) -> None:
         """Tests the `public_repos` method."""
         payload_gen = {
@@ -47,11 +46,9 @@ class TestGithubOrgClient(unittest.TestCase):
                     "name": "AirBnB_clone",
                     "full_name": "georgeeset/AirBnB_clone",
                     "private": False,
-                   
                     "pushed_at": "2023-02-20T23:14:29Z",
                     "git_url": "git://github.com/georgeeset/AirBnB_clone.git",
                     "ssh_url": "git@github.com:georgeeset/AirBnB_clone.git",
-                    "clone_url": "https://github.com/georgeeset/AirBnB_clone.git",
                     "svn_url": "https://github.com/georgeeset/AirBnB_clone",
                     "size": 64,
                     "stargazers_count": 0,
@@ -66,11 +63,9 @@ class TestGithubOrgClient(unittest.TestCase):
                     "name": "AirBnB_clone_v3",
                     "full_name": "georgeeset/AirBnB_clone_v3",
                     "private": False,
-                   
                     "pushed_at": "2023-02-20T23:14:29Z",
                     "git_url": "git://github.com/georgeeset/AirBnB_clone.git",
                     "ssh_url": "git@github.com:georgeeset/AirBnB_clone.git",
-                    "clone_url": "https://github.com/georgeeset/AirBnB_clone.git",
                     "svn_url": "https://github.com/georgeeset/AirBnB_clone",
                     "size": 64,
                     "stargazers_count": 0,
@@ -80,7 +75,7 @@ class TestGithubOrgClient(unittest.TestCase):
                     "open_issues_count": 0,
                     "allow_forking": True,
                  },
-                
+
             ]
         }
         mock_get_json.return_value = payload_gen["repos"]
